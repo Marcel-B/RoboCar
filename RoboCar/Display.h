@@ -26,9 +26,15 @@ public:
 	void set_row(const char* row, int length);
 	void init() const;
 	void start_up();
+	void clear();
+	void reset_pos();
+
 
 private:
 	int i2c_handle;
+	void clear(int handle);
+	void clear2(int handle);
+	void reset_pos(int display);
 };
 
 #endif

@@ -43,13 +43,17 @@ void render(int display, char *bitmap) {
 		wiringPiI2CWriteReg8(display, 0x40, a);
 	}
 }
-void reset_pos(int display)
+void Display::reset_pos(int display)
 {
 	wiringPiI2CWriteReg8(display, 0x00, 0xb0);
 	wiringPiI2CWriteReg8(display, 0x00, 0x00);
 	wiringPiI2CWriteReg8(display, 0x00, 0x10);
 }
-void clear(int display)
+void Display::reset_pos()
+{
+	reset_pos(i2c_handle);
+}
+void Display::clear(int display)
 {
 	reset_pos(display);
 	for (int x = 0; x < 128; x++) {
@@ -58,7 +62,7 @@ void clear(int display)
 		}
 	}
 }
-void clear2(int display)
+void Display::clear2(int display)
 {
 	reset_pos(display);
 	for (int x = 0; x < 128; x++) {
@@ -66,6 +70,10 @@ void clear2(int display)
 			wiringPiI2CWriteReg8(display, 0x40, 0xff);
 		}
 	}
+}
+void Display::clear()
+{
+	clear(i2c_handle);
 }
 char house[8] =
 {
@@ -96,14 +104,17 @@ void Display::set_row(const char* row, int length)
 {
 	clear(i2c_handle);
 	int i = 0;
-	while(i++ < length)
+	while (i < length)
 	{
-		render(i2c_handle, font8x8_basic[(int)row[i]]);// 1
+		render(i2c_handle, font8x8_basic[(int)row[i++]]);// 1
 	}
-	if( i < 16)
+	if (i < 16)
 	{
-		while(i++ < 16)
-		render(i2c_handle, font8x8_basic[(int)' ']);// 1
+		while (i < 16)
+		{
+			render(i2c_handle, font8x8_basic[(int)' ']);// 1
+			i++;
+		}
 	}
 	render(i2c_handle, font8x8_basic[(int)'N']);// 1
 }

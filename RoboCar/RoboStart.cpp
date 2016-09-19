@@ -51,6 +51,9 @@ int main(void)
 		printf("SeaLevel : %f\n", tempPressValues[2]);
 		printf("Distance : %f\n", dist);
 		//Blink_Change();
+		std::string temper = "Temp: " + std::to_string(tempPressValues[0]);
+		dis->clear();
+		dis->set_row(temper.c_str(), foo.length());
 
 
 
