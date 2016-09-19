@@ -98,9 +98,18 @@ void start_up(int handle)
 	render(handle, font8x8_basic[0x40]);//@
 	render(handle, font8x8_basic[0x4D]);//M
 	render(handle, font8x8_basic[0x61]);//a
-	render(handle, font8x8_basic[0x5C]);// 
-	render(handle, font8x8_basic[0x6E]);// n
-	render(handle, font8x8_basic[0x66]);//r
+	render(handle, font8x8_basic[0x75]);//r
 	render(handle, font8x8_basic[0x63]);//c
+	render(handle, font8x8_basic[(int)'e']);//c
+	render(handle, font8x8_basic[(int)'l']);//c
+	render(handle, font8x8_basic[(int)' ']);//c
+	render(handle, font8x8_basic[(int)'B']);//c
+	render(handle, font8x8_basic[(int)'e']);//c
+	render(handle, font8x8_basic[(int)'n']);//c
+	render(handle, font8x8_basic[(int)'d']);//c
+	render(handle, font8x8_basic[(int)'e']);//c
+	render(handle, font8x8_basic[(int)'r']);//c
+	render(handle, font8x8_basic[(int)'s']);//c
+
 }
 
