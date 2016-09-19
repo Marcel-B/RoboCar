@@ -91,7 +91,7 @@ void get_readings(long UT, long UP) {
 
 void get_temp_pressure(int i2c_BMP085_Handle, double* values)
 {
-	int MSB, LSB, XLSB, timing, DEVICE_ADDRESS;
+	int MSB, LSB, XLSB, timing;
 	double temperature, sealevel, ALTITUDE = 39;
 
 	read_calibration_values(i2c_BMP085_Handle);

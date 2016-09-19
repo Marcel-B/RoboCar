@@ -18,9 +18,6 @@
     <ClCompile Include="Display.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="RoboStart.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="wiringPi\ads1115.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -124,6 +121,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="PCA9685.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="RoboStart.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

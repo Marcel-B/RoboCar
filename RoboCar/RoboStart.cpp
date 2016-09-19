@@ -6,6 +6,7 @@
 #include "Dht22.h"
 #include "ServoControl.h"
 #include "Display.h"
+#include <string>
 
 int main(void)
 {
@@ -29,9 +30,11 @@ int main(void)
 	double* tempPressValues = (double*)malloc(sizeof(double) * 3);
 	double* tempHumiValues = (double*)malloc(sizeof(double) * 2);
 
-	int i = 0;
+	//int i = 0;
 	int display_handle = wiringPiI2CSetup(0x3c);
-	start_up(display_handle);
+	Display* dis = new Display(display_handle);
+	std::string foo = "Hallo Welt";
+	dis->set_row(foo.c_str(), foo.length());
 
 	do {
 		get_gyro(gyroValues, i2c_GryscopeHandle);

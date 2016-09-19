@@ -1,33 +1,33 @@
 #include "Display.h"
 
-void init(int display)
+void Display::init() const
 {
-	wiringPiI2CWriteReg8(display, 0x00, 0xae); // display off
-	wiringPiI2CWriteReg8(display, 0x00, 0xd5); // clockdiv
-	wiringPiI2CWriteReg8(display, 0x00, 0x80);
-	wiringPiI2CWriteReg8(display, 0x00, 0xa8); // multiplex
-	wiringPiI2CWriteReg8(display, 0x00, 0x3f);
-	wiringPiI2CWriteReg8(display, 0x00, 0xd3); // offset
-	wiringPiI2CWriteReg8(display, 0x00, 0x00);
-	wiringPiI2CWriteReg8(display, 0x00, 0x40); // startline
-	wiringPiI2CWriteReg8(display, 0x00, 0x8d); // charge pump
-	wiringPiI2CWriteReg8(display, 0x00, 0x14);
-	wiringPiI2CWriteReg8(display, 0x00, 0x20); // memory mode
-	wiringPiI2CWriteReg8(display, 0x00, 0x00);
-	//wiringPiI2CWriteReg8(display,0x00,0x01);
-	wiringPiI2CWriteReg8(display, 0x00, 0xa1); // segregmap
-	wiringPiI2CWriteReg8(display, 0x00, 0xc8); // comscandec
-	wiringPiI2CWriteReg8(display, 0x00, 0xda); // set com pins
-	wiringPiI2CWriteReg8(display, 0x00, 0x12);
-	wiringPiI2CWriteReg8(display, 0x00, 0x81); // contrast
-	wiringPiI2CWriteReg8(display, 0x00, 0xcf);
-	wiringPiI2CWriteReg8(display, 0x00, 0xd9); // precharge
-	wiringPiI2CWriteReg8(display, 0x00, 0xf1);
-	wiringPiI2CWriteReg8(display, 0x00, 0xdb); // vcom detect
-	wiringPiI2CWriteReg8(display, 0x00, 0x40);
-	wiringPiI2CWriteReg8(display, 0x00, 0xa4); // resume
-	wiringPiI2CWriteReg8(display, 0x00, 0xa6); // normal (not inverted)
-	wiringPiI2CWriteReg8(display, 0x00, 0xaf); // display on
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xae); // i2c_handle off
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xd5); // clockdiv
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x80);
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xa8); // multiplex
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x3f);
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xd3); // offset
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x00);
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x40); // startline
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x8d); // charge pump
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x14);
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x20); // memory mode
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x00);
+	//wiringPiI2CWriteReg8(i2c_handle,0x00,0x01);
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xa1); // segregmap
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xc8); // comscandec
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xda); // set com pins
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x12);
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x81); // contrast
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xcf);
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xd9); // precharge
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xf1);
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xdb); // vcom detect
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0x40);
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xa4); // resume
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xa6); // normal (not inverted)
+	wiringPiI2CWriteReg8(i2c_handle, 0x00, 0xaf); // i2c_handle on
 }
 void render(int display, char *bitmap) {
 	char m[8], n[8] = { 0 };
@@ -91,29 +91,40 @@ char _A[8] =
 	0x0,
 };
 
-void start_up(int handle)
-{
-	init(handle);
-	clear(handle);
-	render(handle, font8x8_basic[(int)'@']);//@
-	render(handle, font8x8_basic[(int)'M']);//M
-	render(handle, font8x8_basic[(int)'a']);//a
-	render(handle, font8x8_basic[(int)'r']);//r
-	render(handle, font8x8_basic[(int)'c']);//c
-	render(handle, font8x8_basic[(int)'e']);//c
-	render(handle, font8x8_basic[(int)'l']);//c
-	render(handle, font8x8_basic[(int)' ']);//c
-	render(handle, font8x8_basic[(int)'B']);//c
-	render(handle, font8x8_basic[(int)'e']);//c
-	render(handle, font8x8_basic[(int)'n']);//c
-	render(handle, font8x8_basic[(int)'d']);//c
-	render(handle, font8x8_basic[(int)'e']);//c
-	render(handle, font8x8_basic[(int)'r']);//c
-	render(handle, font8x8_basic[(int)'s']);//c
-	render(handle, font8x8_basic[(int)'s']);//c
-	render(handle, font8x8_basic[(int)'s']);//c
-	render(handle, font8x8_basic[(int)'s']);//c
-	render(handle, font8x8_basic[(int)'s']);//c
 
+void Display::set_row(const char* row, int length)
+{
+	clear(i2c_handle);
+	int i = 0;
+	while(++i < length)
+	{
+		render(i2c_handle, font8x8_basic[(int)row[i]]);// 1
+	}
+}
+
+void Display::start_up()
+{
+	//init(i2c_handle);
+	//clear(handle);
+	//render(handle, font8x8_basic[(int)'@']);// 1
+	//render(handle, font8x8_basic[(int)'M']);// 2
+	//render(handle, font8x8_basic[(int)'a']);// 3
+	//render(handle, font8x8_basic[(int)'r']);// 4
+	//render(handle, font8x8_basic[(int)'c']);// 5
+	//render(handle, font8x8_basic[(int)'e']);// 6
+	//render(handle, font8x8_basic[(int)'l']);// 7
+	//render(handle, font8x8_basic[(int)' ']);// 8
+	//render(handle, font8x8_basic[(int)'B']);// 9
+	//render(handle, font8x8_basic[(int)'e']);//10
+	//render(handle, font8x8_basic[(int)'n']);//11
+	//render(handle, font8x8_basic[(int)'d']);//12
+	//render(handle, font8x8_basic[(int)'e']);//13
+	//render(handle, font8x8_basic[(int)'r']);//14
+	//render(handle, font8x8_basic[(int)'s']);//15
+	//render(handle, font8x8_basic[(int)'s']);//16
+
+	//render(handle, font8x8_basic[(int)'s']);//c
+	//render(handle, font8x8_basic[(int)'s']);//c
+	//render(handle, font8x8_basic[(int)'s']);//c
 }
 

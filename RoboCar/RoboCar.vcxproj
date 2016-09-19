@@ -116,7 +116,7 @@
     <ClCompile Include="Gyroscope.cpp" />
     <ClCompile Include="LedControl.cpp" />
     <ClCompile Include="PCA9685.cpp" />
-    <ClCompile Include="RoboStart.c" />
+    <ClCompile Include="RoboStart.cpp" />
     <ClCompile Include="ServoControl.cpp" />
     <ClCompile Include="UltraSense.cpp" />
     <ClCompile Include="wiringPi\ads1115.c" />
