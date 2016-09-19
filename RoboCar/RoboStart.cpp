@@ -52,17 +52,20 @@ int main(void)
 		printf("SeaLevel : %f\n", tempPressValues[2]);
 		printf("Distance : %f\n", dist);
 		//Blink_Change();
+
 		std::stringstream ss;
-		ss << "Temp: " << tempPressValues[0];
+		ss << "Temp: " << tempHumiValues[0];
 		std::string temper = ss.str();
+
 		dis->clear();
-		dis->set_row(temper.c_str(), temper.length());
-
-		ss.clear();
-		ss << "Hum: " << tempHumiValues[1];
-		temper = ss.str();
 
 		dis->set_row(temper.c_str(), temper.length());
+
+		std::stringstream sss;
+		sss << "Hum: " << tempHumiValues[1];
+		
+		std::string tomper = sss.str();
+		dis->set_row(tomper.c_str(), tomper.length());
 
 
 
