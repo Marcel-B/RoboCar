@@ -95,11 +95,11 @@ void start_up(int handle)
 {
 	init(handle);
 	clear(handle);
-	render(handle, font8x8_basic[0x40]);//@
-	render(handle, font8x8_basic[0x4D]);//M
-	render(handle, font8x8_basic[0x61]);//a
-	render(handle, font8x8_basic[0x75]);//r
-	render(handle, font8x8_basic[0x63]);//c
+	render(handle, font8x8_basic[(int)'@']);//@
+	render(handle, font8x8_basic[(int)'M']);//M
+	render(handle, font8x8_basic[(int)'a']);//a
+	render(handle, font8x8_basic[(int)'r']);//r
+	render(handle, font8x8_basic[(int)'c']);//c
 	render(handle, font8x8_basic[(int)'e']);//c
 	render(handle, font8x8_basic[(int)'l']);//c
 	render(handle, font8x8_basic[(int)' ']);//c
@@ -109,6 +109,10 @@ void start_up(int handle)
 	render(handle, font8x8_basic[(int)'d']);//c
 	render(handle, font8x8_basic[(int)'e']);//c
 	render(handle, font8x8_basic[(int)'r']);//c
+	render(handle, font8x8_basic[(int)'s']);//c
+	render(handle, font8x8_basic[(int)'s']);//c
+	render(handle, font8x8_basic[(int)'s']);//c
+	render(handle, font8x8_basic[(int)'s']);//c
 	render(handle, font8x8_basic[(int)'s']);//c
 
 }
