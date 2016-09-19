@@ -152,6 +152,7 @@
     <ClInclude Include="Bmp85.h" />
     <ClInclude Include="Dht22.h" />
     <ClInclude Include="Display.h" />
+    <ClInclude Include="Font_Basic.h" />
     <ClInclude Include="Gyroscope.h" />
     <ClInclude Include="LedControl.h" />
     <ClInclude Include="PCA9685.h" />

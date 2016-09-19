@@ -95,6 +95,6 @@ void start_up(int handle)
 {
 	init(handle);
 	clear(handle);
-	render(handle, _A);
+	render(handle, font8x8_basic[0x40]);
 }
 

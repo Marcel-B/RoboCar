@@ -239,6 +239,9 @@
     <ClInclude Include="PCA9685.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Font_Basic.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ServoControl.h">

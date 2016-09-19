@@ -3,6 +3,7 @@
 
 #include  "RoboStart.h"
 #include <string.h>
+#include "Font_Basic.h"
 
 void start_up(int handle);
 
