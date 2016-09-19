@@ -95,8 +95,12 @@ void start_up(int handle)
 {
 	init(handle);
 	clear(handle);
-	render(handle, font8x8_basic[0x40]);
-	render(handle, font8x8_basic[0x4D]);
-	render(handle, font8x8_basic[0x61]);
+	render(handle, font8x8_basic[0x40]);//@
+	render(handle, font8x8_basic[0x4D]);//M
+	render(handle, font8x8_basic[0x61]);//a
+	render(handle, font8x8_basic[0x5C]);// 
+	render(handle, font8x8_basic[0x6E]);// n
+	render(handle, font8x8_basic[0x66]);//r
+	render(handle, font8x8_basic[0x63]);//c
 }
 
