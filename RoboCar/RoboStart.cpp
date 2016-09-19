@@ -74,5 +74,6 @@ int main(void)
 	free(gyroValues);
 	free(tempPressValues);
 	free(tempHumiValues);
+	free(dis);
 	return 0;
 }
