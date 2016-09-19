@@ -7,6 +7,7 @@
 #include "ServoControl.h"
 #include "Display.h"
 #include <string>
+#include <sstream>
 
 int main(void)
 {
@@ -51,7 +52,9 @@ int main(void)
 		printf("SeaLevel : %f\n", tempPressValues[2]);
 		printf("Distance : %f\n", dist);
 		//Blink_Change();
-		std::string temper = "Temp: " + tempPressValues[0];
+		std::stringstream ss;
+		ss << "Temp: " << tempPressValues[0];
+		std::string temper = ss.str();
 		printf(temper.c_str());
 		dis->clear();
 		dis->set_row(temper.c_str(), temper.length());
