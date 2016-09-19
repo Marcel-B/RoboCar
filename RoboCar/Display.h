@@ -4,6 +4,6 @@
 #include  "RoboStart.h"
 #include <string.h>
 
-int start_up(int handle);
+void start_up(int handle);
 
 #endif

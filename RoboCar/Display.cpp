@@ -91,7 +91,7 @@ char _A[8] =
 	0x0,
 };
 
-int start_up(int handle)
+void start_up(int handle)
 {
 	init(handle);
 	clear(handle);
