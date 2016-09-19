@@ -102,7 +102,7 @@ char _A[8] =
 
 void Display::set_row(const char* row, int length)
 {
-	clear(i2c_handle);
+	//clear(i2c_handle);
 	int i = 0;
 	while (i < length)
 	{
