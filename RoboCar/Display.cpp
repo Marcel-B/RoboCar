@@ -67,19 +67,34 @@ void clear2(int display)
 		}
 	}
 }
+char house[8] =
+{
+	0b00011000,
+	0b00111100,
+	0b01111110,
+	0b11111111,
+	0b01100110,
+	0b01100110,
+	0b01100110,
+	0b00000000,
+};
+
+char _A[8] =
+{
+	0x0,
+	0x18,
+	0x24,
+	0x24,
+	0x3C,
+	0x24,
+	0x24,
+	0x0,
+};
+
 int start_up(int handle)
 {
-	char test[8] = {
-		0b00011000,
-		0b00111100,
-		0b01111110,
-		0b11111111,
-		0b01100110,
-		0b01100110,
-		0b01100110,
-		0b00000000,
-	};
 	init(handle);
 	clear(handle);
-	render(handle, test);
+	render(handle, _A);
 }
+
