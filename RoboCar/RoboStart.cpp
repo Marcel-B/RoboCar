@@ -55,8 +55,13 @@ int main(void)
 		std::stringstream ss;
 		ss << "Temp: " << tempPressValues[0];
 		std::string temper = ss.str();
-		printf(temper.c_str());
 		dis->clear();
+		dis->set_row(temper.c_str(), temper.length());
+
+		ss.clear();
+		ss << "Hum: " << tempHumiValues[1];
+		temper = ss.str();
+
 		dis->set_row(temper.c_str(), temper.length());
 
 

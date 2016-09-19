@@ -116,7 +116,7 @@ void Display::set_row(const char* row, int length)
 			i++;
 		}
 	}
-	render(i2c_handle, font8x8_basic[(int)'N']);// 1
+	// render(i2c_handle, font8x8_basic[(int)'N']);// 1
 }
 
 void Display::start_up()
