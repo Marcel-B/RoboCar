@@ -52,8 +52,9 @@ int main(void)
 		printf("Distance : %f\n", dist);
 		//Blink_Change();
 		std::string temper = "Temp: " + std::to_string(tempPressValues[0]);
+		printf(temper.c_str());
 		dis->clear();
-		dis->set_row(temper.c_str(), foo.length());
+		dis->set_row(temper.c_str(), temper.length());
 
 
 
