@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Display.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="RoboStart.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\ads1115.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\drcSerial.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\max5322.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\max31855.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\mcp23s08.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\mcp23s17.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\mcp3002.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\mcp3004.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\mcp3422.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\mcp4802.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\mcp23008.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\mcp23016.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\mcp23017.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\pcf8574.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\pcf8591.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\piHiPri.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\piThread.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\sn3218.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\softPwm.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\softServo.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\softTone.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\sr595.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\wiringPi.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\wiringPiI2C.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\wiringPiSPI.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\wiringSerial.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\wiringShift.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="wiringPi\wpiExtensions.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Gyroscope.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="LedControl.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="UltraSense.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Bmp85.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Dht22.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ServoControl.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="PCA9685.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RoboStart.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\ads1115.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\drcSerial.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\max5322.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\max31855.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp23s08.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp23s17.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp23x08.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp23x0817.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp3002.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp3004.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp3422.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp4802.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp23008.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp23016.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp23016reg.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\mcp23017.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\pcf8574.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\pcf8591.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\sn3218.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\softPwm.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\softServo.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\softTone.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\sr595.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\wiringPi.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\wiringPiI2C.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\wiringPiSPI.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\wiringSerial.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\wiringShift.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="wiringPi\wpiExtensions.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Gyroscope.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="LedControl.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="UltraSense.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Bmp85.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Dht22.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="PCA9685.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServoControl.h">
+      <Filter>Headerdateien</Filter>
+    </None>
+  </ItemGroup>
+</Project>
