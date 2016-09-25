@@ -19,7 +19,7 @@ int main(void)
 
 	int i2c_GryscopeHandle = wiringPiI2CSetup(0x68);
 	int i2c_BMP085_Handle = wiringPiI2CSetup(0x77);
-	//setup();
+	setup();
 	printf("Handel No: %d\n", i2c_GryscopeHandle);
 
 	pinMode(LEDLEFT, OUTPUT);
@@ -34,6 +34,7 @@ int main(void)
 	//int i = 0;
 	int display_handle = wiringPiI2CSetup(0x3c);
 	Display* dis = new Display(display_handle);
+
 	std::string foo = "Hallo Welt";
 	dis->set_row(foo.c_str(), foo.length());
 
