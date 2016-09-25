@@ -31,9 +31,9 @@ void setup()
 		delay(1000);
 		//pwm.setPWM(15, 0, 300);
 		//usleep(1000 * 1000);
-		//pwm.setPWM(14, 0, 650);
+		pwm.setPWM(14, 0, 650);
 		delay(1000);
-		pwm.setPWM(15, 0, 700);
+		//pwm.setPWM(15, 0, 700);
 		usleep(1000 * 1000);
 	}
 	pwm.setPWM(14, 0, 450);
