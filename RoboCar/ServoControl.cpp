@@ -21,19 +21,23 @@ void setup()
 	pwm.setPWMFreq(61);
 	usleep(10000);
 	int count = 0;
-	while
-		(count++<2)
+	pwm.setPWM(14, 0, 450);
+	delay(1000);
+	pwm.setPWM(15, 0, 450);
+	delay(1000);
+	while(count++ < 1)
 	{
 		pwm.setPWM(14, 0, 250);
 		delay(1000);
-		pwm.setPWM(15, 0, 300);
-		usleep(1000 * 1000);
-		pwm.setPWM(14, 0, 650);
+		//pwm.setPWM(15, 0, 300);
+		//usleep(1000 * 1000);
+		//pwm.setPWM(14, 0, 650);
 		delay(1000);
 		pwm.setPWM(15, 0, 700);
 		usleep(1000 * 1000);
 	}
 	pwm.setPWM(14, 0, 450);
+	delay(1000);
 	pwm.setPWM(15, 0, 450);
 	printf("\n");
 
