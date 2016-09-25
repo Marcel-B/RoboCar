@@ -25,6 +25,16 @@ void setup()
 	delay(500);
 	pwm.setPWM(15, 0, 250);
 	delay(500);
+
+	while(count++ < 10)
+	{
+		pwm.setPWM(14, 0, 400);
+		delay(100);
+		pwm.setPWM(14, 0, 500);
+		delay(100);
+	}
+	count = 0;
+
 	while(count++ < 3)
 	{
 		pwm.setPWM(14, 0, 250); // 14 = 250 Rechts
