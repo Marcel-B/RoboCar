@@ -23,15 +23,15 @@ void setup()
 	int count = 0;
 	pwm.setPWM(14, 0, 450);
 	delay(1000);
-	pwm.setPWM(15, 0, 450);
+	pwm.setPWM(15, 0, 350);
 	delay(1000);
 	while(count++ < 1)
 	{
-		pwm.setPWM(14, 0, 250);
+		pwm.setPWM(14, 0, 250); // 14 = Rechts / Links
 		delay(1000);
-		//pwm.setPWM(15, 0, 300);
+		//pwm.setPWM(15, 0, 300); // 15 = Hoch / Runter
 		//usleep(1000 * 1000);
-		pwm.setPWM(14, 0, 650);
+		pwm.setPWM(14, 0, 700);
 		delay(1000);
 		//pwm.setPWM(15, 0, 700);
 		usleep(1000 * 1000);
