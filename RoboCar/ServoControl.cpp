@@ -22,22 +22,22 @@ void setup()
 	usleep(10000);
 	int count = 0;
 	pwm.setPWM(14, 0, 450);
-	delay(1000);
+	delay(500);
 	pwm.setPWM(15, 0, 250);
-	delay(1000);
-	while(count++ < 1)
+	delay(500);
+	while(count++ < 3)
 	{
-		pwm.setPWM(14, 0, 240); // 14 = 250 Rechts
-		delay(1000);
+		pwm.setPWM(14, 0, 250); // 14 = 250 Rechts
+		delay(500);
 		//pwm.setPWM(15, 0, 300); // 15 = Hoch / Runter
 		//usleep(1000 * 1000);
 		pwm.setPWM(14, 0, 700); // 700 = Links
-		delay(1000);
+		delay(500);
 		//pwm.setPWM(15, 0, 700);
 		usleep(1000 * 1000);
 	}
 	pwm.setPWM(14, 0, 450);
-	delay(1000);
+	delay(100);
 	pwm.setPWM(15, 0, 300);
 	printf("\n");
 
