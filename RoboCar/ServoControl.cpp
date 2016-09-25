@@ -29,9 +29,9 @@ void setup()
 	while(count++ < 15)
 	{
 		pwm.setPWM(14, 0, 400);
-		delay(250);
+		delay(100);
 		pwm.setPWM(14, 0, 500);
-		delay(250);
+		delay(100);
 	}
 	count = 0;
 
@@ -46,6 +46,8 @@ void setup()
 		//pwm.setPWM(15, 0, 700);
 		//usleep(1000 * 1000);
 	}
+	pwm.setPWM(14, 0, 450);
+	delay(100);
 	pwm.setPWM(15, 0, 250);
 	delay(1000);
 	pwm.setPWM(15, 0, 550);
