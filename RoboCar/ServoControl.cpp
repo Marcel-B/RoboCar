@@ -26,12 +26,12 @@ void setup()
 	pwm.setPWM(15, 0, 250);
 	delay(500);
 
-	while(count++ < 10)
+	while(count++ < 15)
 	{
 		pwm.setPWM(14, 0, 400);
-		delay(100);
+		delay(250);
 		pwm.setPWM(14, 0, 500);
-		delay(100);
+		delay(250);
 	}
 	count = 0;
 
@@ -44,8 +44,12 @@ void setup()
 		pwm.setPWM(14, 0, 700); // 700 = Links
 		delay(500);
 		//pwm.setPWM(15, 0, 700);
-		usleep(1000 * 1000);
+		//usleep(1000 * 1000);
 	}
+	pwm.setPWM(15, 0, 250);
+	delay(1000);
+	pwm.setPWM(15, 0, 550);
+	delay(1000);
 	pwm.setPWM(14, 0, 450);
 	delay(100);
 	pwm.setPWM(15, 0, 300);
