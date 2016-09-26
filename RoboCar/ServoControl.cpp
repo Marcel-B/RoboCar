@@ -6,6 +6,10 @@
 int MinPulse = 200;
 int MaxPulse = 700;
 
+int MaxLeft = 400;
+int MaxRight = 500;
+int Middle = 450;
+
 int Current_x = 0;
 int Current_y = 0;
 int Xmin, Ymin, Xmax, Ymax, home_x, home_y, pwm;
@@ -25,6 +29,19 @@ void setup()
 	delay(500);
 	pwm.setPWM(15, 0, 250);
 	delay(500);
+
+	pwm.setPWM(0, 0, MaxLeft);
+
+	delay(1000);
+
+	pwm.setPWM(0, 0, MaxRight);
+
+	delay(1000);
+
+	pwm.setPWM(0, 0, Middle);
+
+	delay(1000);
+
 
 	while(count++ < 15)
 	{

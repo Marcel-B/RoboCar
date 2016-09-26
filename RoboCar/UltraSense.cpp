@@ -32,7 +32,3 @@ double get_distance()
 	double distanz = (elapsedTime * 34300) / 2;
 	return distanz / 1000000;
 }
-
-
-
-
