@@ -14,8 +14,22 @@ int Current_x = 0;
 int Current_y = 0;
 int Xmin, Ymin, Xmax, Ymax, home_x, home_y, pwm;
 
+
+
+int Motor0_A = 11;//  # pin11
+int Motor0_B = 12;//  # pin12
+int Motor1_A = 13;//  # pin13
+int Motor1_B = 15;//  # pin15
+
+
 void setup()
 {
+	pinMode(Motor0_A, OUTPUT);
+	pinMode(Motor1_A, OUTPUT);
+	pinMode(Motor0_B, OUTPUT);
+	pinMode(Motor1_B, OUTPUT);
+
+
 
 	printf("Testing testing\n"); //make sure you use the right address values. 
 	PCA9685 pwm;
@@ -42,6 +56,10 @@ void setup()
 
 	delay(1000);
 
+	// Motor Speed
+	pwm.setPWM(4, 0, 100);
+	pwm.setPWM(5, 0, 100);
+
 
 	while(count++ < 5)
 	{
@@ -52,7 +70,7 @@ void setup()
 	}
 	count = 0;
 
-	while(count++ < 3)
+	while(count++ < 1)
 	{
 		pwm.setPWM(14, 0, 250); // 14 = 250 Rechts
 		delay(500);
@@ -181,3 +199,58 @@ void test(int pcaHandle)
 	setup();
 	home_x_y(pcaHandle);
 }
+
+
+
+
+
+//# ===========================================================================
+//# Control the DC motor to make it rotate clockwise, so the car will
+//# move forward.
+//# ===========================================================================
+
+void motor0(bool x)
+{
+	if (x)
+	{
+		digitalWrite(Motor0_A, LOW);
+		digitalWrite(Motor0_B, HIGH);
+	}
+	else if(! x)
+	{
+		digitalWrite(Motor0_A, HIGH);
+		digitalWrite(Motor0_B, LOW);
+	}
+	else
+	printf("Config Error");
+}
+def motor1(x) :
+	if x == 'True' :
+		GPIO.output(Motor1_A, GPIO.LOW)
+		GPIO.output(Motor1_B, GPIO.HIGH)
+		elif x == 'False' :
+		GPIO.output(Motor1_A, GPIO.HIGH)
+		GPIO.output(Motor1_B, GPIO.LOW)
+
+		def forward() :
+		motor0(forward0)
+		motor1(forward1)
+
+		def backward() :
+		motor0(backward0)
+		motor1(backward1)
+
+		def forwardWithSpeed(spd = 50) :
+		setSpeed(spd)
+		motor0(forward0)
+		motor1(forward1)
+
+		def backwardWithSpeed(spd = 50) :
+		setSpeed(spd)
+		motor0(backward0)
+		motor1(backward1)
+
+		def stop() :
+		for pin in pins :
+GPIO.output(pin, GPIO.LOW)
+
