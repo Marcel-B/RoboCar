@@ -61,7 +61,7 @@ void setup()
 	pwm.setPWM(5, 0, 100);
 
 
-	while(count++ < 5)
+	while (count++ < 5)
 	{
 		pwm.setPWM(14, 0, 400);
 		delay(100);
@@ -70,7 +70,7 @@ void setup()
 	}
 	count = 0;
 
-	while(count++ < 1)
+	while (count++ < 1)
 	{
 		pwm.setPWM(14, 0, 250); // 14 = 250 Rechts
 		delay(500);
@@ -201,8 +201,12 @@ void test(int pcaHandle)
 }
 
 
-
-
+void setSpeed(int speed)
+{
+	//speed *= 40;
+	//pwm.  set_value(EN_M0, 0, speed);
+	//pwm.set_value(EN_M1, 0, speed);
+}
 
 //# ===========================================================================
 //# Control the DC motor to make it rotate clockwise, so the car will
@@ -216,41 +220,52 @@ void motor0(bool x)
 		digitalWrite(Motor0_A, LOW);
 		digitalWrite(Motor0_B, HIGH);
 	}
-	else if(! x)
+	else if (!x)
 	{
 		digitalWrite(Motor0_A, HIGH);
 		digitalWrite(Motor0_B, LOW);
 	}
 	else
-	printf("Config Error");
+		printf("Config Error");
 }
-def motor1(x) :
-	if x == 'True' :
-		GPIO.output(Motor1_A, GPIO.LOW)
-		GPIO.output(Motor1_B, GPIO.HIGH)
-		elif x == 'False' :
-		GPIO.output(Motor1_A, GPIO.HIGH)
-		GPIO.output(Motor1_B, GPIO.LOW)
+void motor1(bool x)
+{
+	if (x)
+	{
+		digitalWrite(Motor1_A, LOW);
+		digitalWrite(Motor1_B, HIGH);
+	}
+	else if (!x)
+	{
+		digitalWrite(Motor1_A, HIGH);
+		digitalWrite(Motor1_B, LOW);
+	}
+}
+void forward()
+{
+	motor0(true);
+	motor1(true);
+}
+void backward()
+{
+	motor0(true);
+	motor1(true);
+}
 
-		def forward() :
-		motor0(forward0)
-		motor1(forward1)
-
-		def backward() :
-		motor0(backward0)
-		motor1(backward1)
-
-		def forwardWithSpeed(spd = 50) :
-		setSpeed(spd)
-		motor0(forward0)
-		motor1(forward1)
-
-		def backwardWithSpeed(spd = 50) :
-		setSpeed(spd)
-		motor0(backward0)
-		motor1(backward1)
-
-		def stop() :
-		for pin in pins :
-GPIO.output(pin, GPIO.LOW)
-
+void forwardWithSpeed(int spd = 50)
+{
+	//setSpeed(spd);
+	motor0(true);
+	motor1(true);
+}
+void backwardWithSpeed(int spd = 50)
+{
+	//setSpeed(spd);
+	motor0(true);
+	motor1(true);
+}
+void stop()
+{
+	//for pin in pins :
+	//digitalWrite(pin, LOW);
+}
