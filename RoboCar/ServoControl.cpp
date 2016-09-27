@@ -66,7 +66,7 @@ void setup()
 	forwardWithSpeed(70);
 	printf("And Go 2\n");
 
-	delay(500);
+	delay(2500);
 	stop();
 	while (count++ < 5)
 	{
