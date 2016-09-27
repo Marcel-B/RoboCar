@@ -57,11 +57,12 @@ void setup()
 	delay(1000);
 
 	// Motor Speed
-	pwm.setPWM(4, 0, 100);
-	pwm.setPWM(5, 0, 100);
+	pwm.setPWM(4, 0, 400);
+	pwm.setPWM(5, 0, 400);
 
 
 	forwardWithSpeed(70);
+
 	delay(500);
 	stop();
 	while (count++ < 5)
@@ -257,6 +258,7 @@ void backward()
 
 void forwardWithSpeed(int spd = 50)
 {
+	
 	//setSpeed(spd);
 	motor0(true);
 	motor1(true);
