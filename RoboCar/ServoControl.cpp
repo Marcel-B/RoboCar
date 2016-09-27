@@ -61,6 +61,9 @@ void setup()
 	pwm.setPWM(5, 0, 100);
 
 
+	forwardWithSpeed(70);
+	delay(500);
+	stop();
 	while (count++ < 5)
 	{
 		pwm.setPWM(14, 0, 400);
@@ -266,6 +269,11 @@ void backwardWithSpeed(int spd = 50)
 }
 void stop()
 {
+	digitalWrite(Motor1_A, LOW);
+	digitalWrite(Motor1_B, LOW);
+	digitalWrite(Motor0_A, LOW);
+	digitalWrite(Motor0_B, LOW);
+
 	//for pin in pins :
 	//digitalWrite(pin, LOW);
 }
