@@ -41,7 +41,8 @@ void setup()
 	pwm.setPWMFreq(61);
 	usleep(10000);
 	int count = 0;
-	pwm.setPWM(14, 0, 450);
+	
+	/*pwm.setPWM(14, 0, 450);
 	delay(500);
 	pwm.setPWM(15, 0, 250);
 	delay(500);
@@ -56,7 +57,7 @@ void setup()
 
 	pwm.setPWM(0, 0, Middle);
 
-	delay(1000);
+	delay(1000);*/
 
 	// Motor Speed
 	pwm.setPWM(EN_M0, 0, 4000);
@@ -68,7 +69,7 @@ void setup()
 
 	delay(2500);
 	stop();
-	while (count++ < 5)
+/*	while (count++ < 5)
 	{
 		pwm.setPWM(14, 0, 400);
 		delay(100);
@@ -96,7 +97,7 @@ void setup()
 	delay(1000);
 	pwm.setPWM(14, 0, 450);
 	delay(100);
-	pwm.setPWM(15, 0, 300);
+	pwm.setPWM(15, 0, 300);*/
 	printf("\n");
 
 
