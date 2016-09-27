@@ -256,14 +256,14 @@ void backward()
 	motor1(true);
 }
 
-void forwardWithSpeed(int spd = 50)
+void forwardWithSpeed(int spd)
 {
 	
 	//setSpeed(spd);
 	motor0(true);
 	motor1(true);
 }
-void backwardWithSpeed(int spd = 50)
+void backwardWithSpeed(int spd)
 {
 	//setSpeed(spd);
 	motor0(true);
