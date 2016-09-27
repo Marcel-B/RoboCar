@@ -12,15 +12,17 @@ int Middle = 400;
 
 int Current_x = 0;
 int Current_y = 0;
-int Xmin, Ymin, Xmax, Ymax, home_x, home_y, pwm;
+int Xmin, Ymin, Xmax, Ymax, home_x, home_y;
 
-
+int EN_M0 = 4;
+int EN_M1 = 5;
 
 int Motor0_A = 11;//  # pin11
 int Motor0_B = 12;//  # pin12
 int Motor1_A = 13;//  # pin13
 int Motor1_B = 15;//  # pin15
 
+PCA9685 pwm;
 
 void setup()
 {
@@ -32,10 +34,10 @@ void setup()
 
 
 	printf("Testing testing\n"); //make sure you use the right address values. 
-	PCA9685 pwm;
+
 	pwm.init(1, 0x40);
 	usleep(1000);
-	printf("Setting frequency..");
+	printf("Setting frequency..\n");
 	pwm.setPWMFreq(61);
 	usleep(10000);
 	int count = 0;
@@ -57,12 +59,12 @@ void setup()
 	delay(1000);
 
 	// Motor Speed
-	pwm.setPWM(4, 0, 2000);
-	pwm.setPWM(5, 0, 2000);
+	pwm.setPWM(EN_M0, 0, 4000);
+	pwm.setPWM(EN_M1, 4000);
 
-	printf("And Go 1");
+	printf("And Go 1\n");
 	forwardWithSpeed(70);
-	printf("And Go 2");
+	printf("And Go 2\n");
 
 	delay(500);
 	stop();
@@ -208,9 +210,9 @@ void test(int pcaHandle)
 
 void setSpeed(int speed)
 {
-	//speed *= 40;
-	//pwm.  set_value(EN_M0, 0, speed);
-	//pwm.set_value(EN_M1, 0, speed);
+	speed *= 40;
+	pwm.setPWM(EN_M0, 0, speed);
+	pwm.setPWM(EN_M1, 0, speed);
 }
 
 //# ===========================================================================
@@ -260,13 +262,13 @@ void backward()
 void forwardWithSpeed(int spd)
 {
 	
-	//setSpeed(spd);
+	setSpeed(spd);
 	motor0(true);
 	motor1(true);
 }
 void backwardWithSpeed(int spd)
 {
-	//setSpeed(spd);
+	setSpeed(spd);
 	motor0(true);
 	motor1(true);
 }
