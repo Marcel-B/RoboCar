@@ -57,8 +57,8 @@ void setup()
 	delay(1000);
 
 	// Motor Speed
-	pwm.setPWM(4, 0, 700);
-	pwm.setPWM(5, 0, 700);
+	pwm.setPWM(4, 0, 2000);
+	pwm.setPWM(5, 0, 2000);
 
 	printf("And Go 1");
 	forwardWithSpeed(70);
