@@ -17,6 +17,7 @@ void backward();
 void forwardWithSpeed(int spd);
 void backwardWithSpeed(int spd);
 void stop();
+void KopfKreisen();
 
 
 

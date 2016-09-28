@@ -41,7 +41,7 @@ void setup()
 	pwm.setPWMFreq(61);
 	usleep(10000);
 	int count = 0;
-	
+
 	pwm.setPWM(14, 0, 450);
 	delay(500);
 	pwm.setPWM(15, 0, 250);
@@ -69,6 +69,10 @@ void setup()
 
 	delay(2500);
 	stop();
+
+	KopfKreisen();
+
+
 	while (count++ < 5)
 	{
 		pwm.setPWM(14, 0, 400);
@@ -262,7 +266,7 @@ void backward()
 
 void forwardWithSpeed(int spd)
 {
-	
+
 	setSpeed(spd);
 	motor0(true);
 	motor1(true);
@@ -282,4 +286,20 @@ void stop()
 
 	//for pin in pins :
 	//digitalWrite(pin, LOW);
+}
+
+void KopfKreisen()
+{
+	int i = 0;
+	for (i = 0; i < 5; i++)
+	{
+		pwm.setPWM(14, 0, 250); // 14 = 250 Rechts
+		delay(500);
+		pwm.setPWM(15, 0, 500); // 15 = Hoch / Runter
+		delay(500);
+		pwm.setPWM(14, 0, 700); // 700 = Links
+		delay(500);
+		pwm.setPWM(15, 0, 300); // 15 = Hoch / Runter
+		delay(500);
+	}
 }
