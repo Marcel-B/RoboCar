@@ -17,10 +17,10 @@ int Xmin, Ymin, Xmax, Ymax, home_x, home_y;
 int EN_M0 = 4;
 int EN_M1 = 5;
 
-int Motor0_A = 11;//  # pin11
-int Motor0_B = 12;//  # pin12
-int Motor1_A = 13;//  # pin13
-int Motor1_B = 15;//  # pin15
+int Motor0_A = 0;// 11;//  # pin11
+int Motor0_B = 1;// 12;//  # pin12
+int Motor1_A = 2;// 13;//  # pin13
+int Motor1_B = 3;// 15;//  # pin15
 
 PCA9685 pwm;
 
