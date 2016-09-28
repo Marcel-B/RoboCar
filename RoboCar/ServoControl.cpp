@@ -255,8 +255,8 @@ void motor1(bool x)
 }
 void forward()
 {
-	motor0(true);
-	motor1(true);
+	motor0(false);
+	motor1(false);
 }
 void backward()
 {
@@ -268,8 +268,8 @@ void forwardWithSpeed(int spd)
 {
 
 	setSpeed(spd);
-	motor0(true);
-	motor1(true);
+	motor0(false);
+	motor1(false);
 }
 void backwardWithSpeed(int spd)
 {
