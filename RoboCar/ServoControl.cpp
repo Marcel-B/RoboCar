@@ -294,12 +294,12 @@ void KopfKreisen()
 	for (i = 0; i < 5; i++)
 	{
 		pwm.setPWM(14, 0, 250); // 14 = 250 Rechts
-		delay(500);
+		delay(50);
 		pwm.setPWM(15, 0, 500); // 15 = Hoch / Runter
-		delay(500);
+		delay(50);
 		pwm.setPWM(14, 0, 700); // 700 = Links
-		delay(500);
+		delay(50);
 		pwm.setPWM(15, 0, 300); // 15 = Hoch / Runter
-		delay(500);
+		delay(50);
 	}
 }
