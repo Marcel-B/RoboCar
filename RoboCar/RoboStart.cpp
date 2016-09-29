@@ -19,13 +19,16 @@ int main(void)
 
 	int i2c_GryscopeHandle = wiringPiI2CSetup(0x68);
 	int i2c_BMP085_Handle = wiringPiI2CSetup(0x77);
-	setup();
+	//setup();
 	printf("Handel No: %d\n", i2c_GryscopeHandle);
 
 	pinMode(LEDLEFT, OUTPUT);
 	pinMode(LEDRIGHT, OUTPUT);
 	pinMode(TRIGGER, OUTPUT);
 	pinMode(ECHO, INPUT);
+	pinMode(29, INPUT);
+
+
 
 	double* gyroValues = (double*)malloc(sizeof(double) * 8);
 	double* tempPressValues = (double*)malloc(sizeof(double) * 3);
@@ -39,6 +42,8 @@ int main(void)
 	dis->set_row(foo.c_str(), foo.length());
 
 	do {
+		auto inn = digitalRead(29);
+		printf("LED READ :%d\n", inn);
 		get_gyro(gyroValues, i2c_GryscopeHandle);
 		get_temp_pressure(i2c_BMP085_Handle, tempPressValues);
 		read_dht22_dat(tempHumiValues);
