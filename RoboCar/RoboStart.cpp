@@ -40,10 +40,15 @@ int main(void)
 
 	std::string foo = "Hallo Welt";
 	dis->set_row(foo.c_str(), foo.length());
+	int inn;
+	do
+	{
+		inn = digitalRead(29);
+		printf("LED READ :%d\n", inn);
+		delay(100);
+	} while (true);
 
 	do {
-		auto inn = digitalRead(29);
-		printf("LED READ :%d\n", inn);
 		get_gyro(gyroValues, i2c_GryscopeHandle);
 		get_temp_pressure(i2c_BMP085_Handle, tempPressValues);
 		read_dht22_dat(tempHumiValues);
@@ -69,7 +74,7 @@ int main(void)
 
 		std::stringstream sss;
 		sss << "Humi:..." << tempHumiValues[1];
-		
+
 		std::string tomper = sss.str();
 		dis->set_row(tomper.c_str(), tomper.length());
 
