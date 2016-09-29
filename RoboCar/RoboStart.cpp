@@ -19,15 +19,13 @@ int main(void)
 
 	int i2c_GryscopeHandle = wiringPiI2CSetup(0x68);
 	int i2c_BMP085_Handle = wiringPiI2CSetup(0x77);
-	//setup();
+	setup();
 	printf("Handel No: %d\n", i2c_GryscopeHandle);
 
 	pinMode(LEDLEFT, OUTPUT);
 	pinMode(LEDRIGHT, OUTPUT);
 	pinMode(TRIGGER, OUTPUT);
 	pinMode(ECHO, INPUT);
-	pinMode(29, INPUT);
-
 
 
 	double* gyroValues = (double*)malloc(sizeof(double) * 8);
@@ -40,13 +38,7 @@ int main(void)
 
 	std::string foo = "Hallo Welt";
 	dis->set_row(foo.c_str(), foo.length());
-	int inn;
-	do
-	{
-		inn = digitalRead(29);
-		printf("LED READ :%d\n", inn);
-		delay(100);
-	} while (true);
+
 
 	do {
 		get_gyro(gyroValues, i2c_GryscopeHandle);
