@@ -41,34 +41,34 @@ int main(void)
 
 
 	do {
-		get_gyro(gyroValues, i2c_GryscopeHandle);
-		get_temp_pressure(i2c_BMP085_Handle, tempPressValues);
-		read_dht22_dat(tempHumiValues);
+		//get_gyro(gyroValues, i2c_GryscopeHandle);
+		//get_temp_pressure(i2c_BMP085_Handle, tempPressValues);
+		//read_dht22_dat(tempHumiValues);
 		dist = get_distance();
 		//for (i = 0; i < 8; i++)
 		//  printf("Val %d = %f\n", i, gyroValues[i]);
 		printf("+++++++++\n");
-		printf("Temp     : %f\n", tempPressValues[0]);
-		printf("Temp     : %f\n", tempHumiValues[0]);
-		printf("Humidity : %f\n", tempHumiValues[1]);
-		printf("Pressure : %f\n", tempPressValues[1]);
-		printf("SeaLevel : %f\n", tempPressValues[2]);
+		//printf("Temp     : %f\n", tempPressValues[0]);
+		//printf("Temp     : %f\n", tempHumiValues[0]);
+		//printf("Humidity : %f\n", tempHumiValues[1]);
+		//printf("Pressure : %f\n", tempPressValues[1]);
+		//printf("SeaLevel : %f\n", tempPressValues[2]);
 		printf("Distance : %f\n", dist);
 		//Blink_Change();
 
 		std::stringstream ss;
-		ss << "Temp:..." << tempHumiValues[0];
+		//ss << "Temp:..." << tempHumiValues[0];
 		std::string temper = ss.str();
 
-		dis->clear();
+		//dis->clear();
 
-		dis->set_row(temper.c_str(), temper.length());
+		//dis->set_row(temper.c_str(), temper.length());
 
-		std::stringstream sss;
-		sss << "Humi:..." << tempHumiValues[1];
+		//std::stringstream sss;
+		//sss << "Humi:..." << tempHumiValues[1];
 
-		std::string tomper = sss.str();
-		dis->set_row(tomper.c_str(), tomper.length());
+		//std::string tomper = sss.str();
+		//dis->set_row(tomper.c_str(), tomper.length());
 
 
 
