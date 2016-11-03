@@ -229,13 +229,13 @@ void motor0(bool x)
 {
 	if (x)
 	{
-		digitalWrite(Motor0_A, LOW);
+		digitalWrite(Motor0_A, HIGH);
 		digitalWrite(Motor0_B, HIGH);
 	}
 	else if (!x)
 	{
 		digitalWrite(Motor0_A, HIGH);
-		digitalWrite(Motor0_B, LOW);
+		digitalWrite(Motor0_B, HIGH);
 	}
 	else
 		printf("Config Error");
