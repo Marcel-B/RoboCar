@@ -61,13 +61,13 @@ void setup()
 
 	// Motor Speed
 	pwm.setPWM(EN_M0, 0, 4000);
-	pwm.setPWM(EN_M1, 4000);
+	pwm.setPWM(EN_M1, 0, 4000);
 
 	printf("And Go 1\n");
 	forwardWithSpeed(70);
 	printf("And Go 2\n");
 
-	delay(2500);
+	delay(5000);
 	stop();
 
 	KopfKreisen();
