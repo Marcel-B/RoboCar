@@ -30,6 +30,7 @@ void setup()
 	pinMode(Motor1_A, OUTPUT);
 	pinMode(Motor0_B, OUTPUT);
 	pinMode(Motor1_B, OUTPUT);
+	pinMode(29, OUTPUT);
 
 
 
@@ -62,6 +63,9 @@ void setup()
 	// Motor Speed
 	pwm.setPWM(EN_M0, 0, 4000);
 	pwm.setPWM(EN_M1, 0, 4000);
+
+	digitalWrite(29, HIGH);
+
 
 	printf("And Go 1\n");
 	forwardWithSpeed(70);
@@ -266,7 +270,6 @@ void backward()
 
 void forwardWithSpeed(int spd)
 {
-
 	setSpeed(spd);
 	motor0(false);
 	motor1(false);
