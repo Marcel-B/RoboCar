@@ -64,6 +64,8 @@ void setup()
 	pwm.setPWM(EN_M0, 0, 4000);
 	pwm.setPWM(EN_M1, 0, 4000);
 
+
+	// Pin29 Standby für Motor (vorläufig)
 	digitalWrite(29, HIGH);
 
 
