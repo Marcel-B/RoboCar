@@ -32,8 +32,6 @@ void setup()
 	pinMode(Motor1_B, OUTPUT);
 	pinMode(29, OUTPUT);
 
-
-
 	printf("Testing testing\n"); //make sure you use the right address values. 
 
 	pwm.init(1, 0x40);
@@ -65,7 +63,7 @@ void setup()
 	pwm.setPWM(EN_M1, 0, 4000);
 
 
-	// Pin29 Standby für Motor (vorläufig)
+	// Pin29 Standby fï¿½r Motor (vorlï¿½ufig)
 	digitalWrite(29, HIGH);
 
 

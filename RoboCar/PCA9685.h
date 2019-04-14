@@ -1,5 +1,6 @@
 #ifndef _PCA9685_H 
 #define _PCA9685_H 
+
 #include <inttypes.h>
 #include <sys/stat.h> 
 #include <sys/ioctl.h> 
@@ -13,8 +14,6 @@
 #include <math.h> 
 #include <stdio.h> 
 #include <unistd.h>
-
-
 
 #define MODE1 0x00//Mode register 1 include <inttypes.h>
 #define MODE2 0x01
