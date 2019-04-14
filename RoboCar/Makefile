@@ -1,24 +1,24 @@
-all: main.o servo.o led.o display.o dht.o bmp.o pca.o
-	gcc -o all main.o servo.o led.o display.o dht.o bmp.o pca.o
+all: RoboStart.o ServoControl.o LedControl.o Display.o Dht22.o Bmp85.o PCA9685.o
+	gcc -o all RoboStart.o ServoControl.o LedControl.o Display.o Dht22.o Bmp85.o PCA9685.o
 
-pca.o: PCA9685.cpp
+PCA9685.o: PCA9685.cpp
 	gcc -c PCA9685.cpp
 
-bmp.o: Bmp85.cpp
+Bmp85.o: Bmp85.cpp
 	gcc -c Bmp85.cpp
 
-dht.o: Dht22.cpp
+Dht22.o: Dht22.cpp
 	gcc -c Dht22.cpp
 
-display.o: Display.cpp
+Display.o: Display.cpp
 	gcc -c Display.cpp
 
-led.o: LedControl.cpp
+LedControl.o: LedControl.cpp
 	gcc -c LedControl.cpp
 
-servo.o: ServoControl.cpp
+ServoControl.o: ServoControl.cpp
 	gcc -c ServoControl.cpp
 
-main.o: RoboStart.cpp
+RoboStart.o: RoboStart.cpp
 	gcc -c RoboStart.cpp
 
