@@ -1,7 +1,7 @@
 LIBS = -lwiringPi
 
 all: RoboStart.o ServoControl.o LedControl.o Display.o Dht22.o Bmp85.o PCA9685.o
-	gcc -o all RoboStart.o ServoControl.o LedControl.o Display.o Dht22.o Bmp85.o PCA9685.o -lwiringPi
+	gcc -o all RoboStart.o ServoControl.o LedControl.o Display.o Dht22.o Bmp85.o PCA9685.o
 
 PCA9685.o: PCA9685.cpp
 	gcc -c PCA9685.cpp
